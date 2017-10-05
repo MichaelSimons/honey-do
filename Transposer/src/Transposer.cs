@@ -35,11 +35,11 @@ namespace Transposer
             ArgumentSyntax argSyntax = ArgumentSyntax.Parse(args, syntax =>
             {
                 string inputFile = null;
-                syntax.DefineOption("input-file", ref inputFile, "The file to parse and transpose");
+                syntax.DefineParameter("input-file", ref inputFile, "The file to parse and transpose");
                 InputFile = inputFile;
 
                 string outputFile = null;
-                syntax.DefineOption("output-file", ref outputFile, "The file to write the transposed content to");
+                syntax.DefineParameter("output-file", ref outputFile, "The file to write the transposed content to");
                 OutputFile = outputFile;
             });
 
