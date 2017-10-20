@@ -61,8 +61,6 @@ namespace NumericCombine
 
         private static void ProcessFiles()
         {
-            List<char[]> outputColumns = new List<char[]>();
-            
             FileStream input1FileStream = new FileStream(Input1File, FileMode.Open);
             FileStream input2FileStream = new FileStream(Input2File, FileMode.Open);
             
@@ -74,8 +72,8 @@ namespace NumericCombine
                 {
                     string[] input1 = reader1.ReadLine().Split(' ');
                     string[] input2 = reader2.ReadLine().Split(' ');
-                    
                     string[] output = new string[input1.Length];
+                    
                     for (int i = 0; i < input1.Length; i ++)
                     {
                         output[i] = (int.Parse(input1[i]) + int.Parse(input2[i])).ToString();
